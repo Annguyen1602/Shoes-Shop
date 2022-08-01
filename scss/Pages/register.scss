@@ -1,0 +1,273 @@
+@import "../Base/base";
+@import "../Themes/variable";
+.header {
+  .sub-header {
+    background-color: $c1-bg-dark;
+    .container {
+      .content {
+        padding: 10px 0;
+
+        .header-left {
+          display: flex;
+          align-items: center;
+          a {
+            img {
+            }
+          }
+        }
+        .header-right {
+          width: 190px;
+          justify-content: space-between;
+          align-items: center;
+          .cover {
+            a {
+              align-items: center;
+              i {
+                height: 24px;
+                width: 31px;
+                font-size: $text-big;
+                top: 3px;
+              }
+              p {
+                margin: auto;
+                font-size: $text-big;
+                height: 36px;
+                width: 35px;
+                line-height: 36.31px;
+              }
+            }
+          }
+          a {
+            font-size: $text-small;
+            font-weight: $text-light;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    .menu {
+      padding: 16px 0;
+      height: 70px;
+      .link {
+        margin-right: 15px;
+        width: 66px;
+        text-align: center;
+
+        &:hover a {
+          font-weight: $text-regular;
+          border-bottom: 1px solid #000000;
+        }
+        a {
+          text-decoration: none;
+          padding-bottom: 10px;
+          color: $c1-black;
+          font-weight: $text-light;
+          font-size: $text-medium;
+          line-height: 24.2px;
+        }
+      }
+    }
+  }
+}
+.register {
+  padding: 30px 120px;
+  .container {
+    h1 {
+      text-align: center;
+    }
+    .form {
+      .form-group {
+        width: 482px;
+        height: 68px;
+        @media screen and (max-width: 1200px) {
+          width: 90%;
+        }
+
+        .input-group {
+          border-bottom: 5px solid #ae18e2;
+          outline: none;
+          border-radius: 0;
+
+          input {
+            border: none;
+            font-size: $text-bigger;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+            &::placeholder {
+              font-weight: $text-regular;
+              font-size: $text-bigger;
+              line-height: 36px;
+            }
+          }
+          span {
+            padding-top: 28px;
+          }
+        }
+        span {
+          position: relative;
+          z-index: 10;
+          color: $c6-red;
+        }
+        #gender {
+          width: 482px;
+          height: 68px;
+          p {
+            font-weight: $text-regular;
+            font-size: $text-bigger;
+            line-height: 36px;
+          }
+          border: none;
+          display: flex;
+          justify-content: space-between;
+          padding-top: 18px;
+          align-items: baseline;
+          input[type="radio"] {
+            position: absolute;
+
+            opacity: 0;
+            + .radio-label {
+              font-weight: $text-regular;
+              font-size: $text-bigger;
+              line-height: 36px;
+              &:before {
+                content: "";
+                background: $color1;
+                border-radius: 100%;
+                border: 1px solid darken($color1, 25%);
+                display: inline-block;
+                width: 45px;
+                height: 35px;
+                position: relative;
+                top: 1px;
+                margin-right: 10px;
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                transition: all 250ms ease;
+              }
+            }
+            &:checked {
+              + .radio-label {
+                &:before {
+                  background-color: $color2;
+                  box-shadow: inset 0 0 0 7px $color1;
+                }
+              }
+            }
+          }
+        }
+        span {
+        }
+      }
+      .submit {
+        width: 100%;
+        text-align: end;
+        @media screen and (max-width: 1200px) {
+          text-align: start;
+        }
+
+        button {
+          width: 291px;
+          height: 50px;
+          transform: translateX(-65%);
+          background-color: $color2;
+          color: $c7-white;
+          border: none;
+          font-weight: $text-regular;
+          font-size: $text-bigger;
+          line-height: 36px;
+          margin-top: 91px;
+          @media screen and (max-width: 1200px) {
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  margin-top: 104px;
+  background-color: $c4-bg-light-gray;
+  .container {
+    .info-up {
+      padding: 40px 0;
+      .row {
+        .contact {
+          h2 {
+            font-size: $text-medium;
+            font-weight: $text-bold;
+          }
+          p {
+            font-size: $text-x-small;
+          }
+          a {
+            text-decoration: none;
+            display: block;
+            color: $c1-black;
+            font-size: $text-x-small;
+            transition: all 300ms;
+            &:hover {
+              color: $c2-gray;
+            }
+          }
+          #learn {
+            color: $c3-brown;
+          }
+        }
+      }
+    }
+  }
+  .info-down {
+    background-color: $c3-bg-gray;
+    padding: 40px 0;
+    .container {
+      .row {
+        .branch {
+          h2 {
+            font-size: $text-medium;
+            font-weight: $text-bold;
+          }
+          p {
+            font-size: $text-x-small;
+          }
+          a {
+            text-decoration: none;
+            color: $c3-brown;
+
+            font-size: $text-x-small;
+          }
+        }
+      }
+    }
+  }
+}
+.backtotop {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  right: 15px;
+  bottom: 15px;
+  color: $c1-black;
+  transition: all 0.2s;
+
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+}
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+body .backtotop i {
+  color: $c1-black;
+  font-size: $text-big;
+}
